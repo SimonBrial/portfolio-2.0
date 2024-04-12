@@ -1,0 +1,70 @@
+---
+import "@fontsource-variable/exo";
+import Navbar from "../components/reactComponents/Navbar";
+import SocialMediaContainer from "../components/astroComponents/SocialMediaContainer.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-black custom-scrollbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navbar client:load />
+    <main
+      class="pt-[2rem] pl-[3.5rem] pr-[1.5rem] md:pt-[0rem] md:px-[8rem] h-screen w-full"
+    >
+      <slot />
+    </main>
+    <SocialMediaContainer />
+  </body>
+</html>
+<style is:global>
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 2px; /* Tamaño del scroll en vertical */
+    display: block; /* Ocultar scroll */
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #999999;
+  }
+  body {
+    font-family: "Exo Variable", sans-serif;
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    color-scheme: dark light;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+</style>

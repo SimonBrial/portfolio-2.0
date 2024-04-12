@@ -1,0 +1,63 @@
+---
+import BtnDownloadCV from "./BtnDownloadCV.astro";
+---
+
+<section
+  id="about"
+  class="text-white text-3xl flex flex-col justify-center h-full w-full relative py-[6rem]"
+>
+  <!-- Line Decoration -->
+  <div
+    class="fixed border border-dashed border-r-white/20 border-transparent h-[180%] md:right-[8rem] top-0"
+  >
+  </div>
+  <!-- Line Decoration -->
+  <!-- Bg item animate -->
+  <span
+    class="w-[12rem] h-[12rem] absolute right-[8rem] bottom-[10rem] -z-10 bg-cyan-700 rounded-full blur-3xl"
+  ></span>
+  <span
+    class="animate-bounce w-[8rem] h-[8rem] absolute left-[8rem] top-[12rem] -z-10 bg-cyan-700 rounded-full blur-3xl"
+  ></span>
+  <span
+    class="animate-bounce w-[8rem] h-[8rem] absolute right-[8rem] top-[5rem] z-10 bg-cyan-700 rounded-full blur-3xl border border-red-500"
+  ></span>
+  <!-- Bg item animate -->
+  <!-- Section's content -->
+  <div class="flex flex-col gap-3 relative w-full">
+    <div
+      class="absolute border border-dashed border-transparent border-l-white/20 w-5 h-[150%] -top-[50%] left-0"
+    >
+    </div>
+    <p
+      class="pl-2 pt-2 -mb-3 border border-dashed border-transparent border-t-white/20"
+    >
+      Hi, I'm
+    </p>
+    <h1
+      class="pl-2 pt-2 text-5xl md:text-7xl -mb-5 border border-dashed border-transparent border-t-white/20"
+    >
+      Simon Briceño
+    </h1>
+    <h1
+      class="font-bold pl-2 text-5xl md:text-7xl h-[6.5rem] md:h-[4.5rem] drop-shadow-lg shadow-cyan-300 bg-gradient-to-r from-cyan-400 via-cyan-700 to-blue-800 inline-block text-transparent bg-clip-text border border-dashed border-transparent border-b-white/20"
+    >
+      A Web Developer
+    </h1>
+    <hr class="ounded-full bg-cyan-400" />
+    <p
+      class="text-[1rem] font-thin leading-normal px-2 border border-dashed border-transparent border-t-white/20"
+    >
+      I am a <kbd class="text-cyan-400">Web developer</kbd> passionate about technology
+      and science, with the ability to continuously learn and take on new challenges.
+    </p>
+    <p
+      class="text-[1rem] font-thin leading-normal px-2 -mt-4 border border-dashed border-transparent border-b-white/20"
+    >
+      I am currently expanding my knowledge in Backend technologies to become
+      versatile in web development.
+    </p>
+  </div>
+  <BtnDownloadCV />
+  <!-- Section's content -->
+</section>

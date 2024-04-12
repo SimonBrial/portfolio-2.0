@@ -1,0 +1,18 @@
+---
+import NavLink from "../astroComponents/NavLink.astro";
+import Logo from "./Logo.tsx";
+
+// const navArray = ["about me", "skills", "projects", "Interesses"];
+---
+
+<header class="p-5 flex items-center fixed border border-red-500 w-full">
+  <Logo />
+  <nav
+    class="text-white flex gap-4 justify-center text-xl uppercase w-full mr-20"
+  >
+    <NavLink dir="about" title="about me" />
+    <NavLink dir="skills" title="skills" />
+    <NavLink dir="projects" title="projects" />
+    <NavLink dir="interesses" title="interesses" />
+  </nav>
+</header>

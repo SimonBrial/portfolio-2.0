@@ -1,0 +1,14 @@
+---
+interface Props {
+  title: string;
+  dir: string;
+}
+
+const { title, dir } = Astro.props;
+---
+
+<a
+  href={dir}
+  class="hover:text-cyan-400 drop-shadow-xl hover:drop-shadow-2xl shadow-cyan-300 transition-all px-6 py-3 border-transparent hover:border-red-500 hover:bg-cyan-50/20 rounded-md text-center"
+  >{title}</a
+>
