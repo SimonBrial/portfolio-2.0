@@ -18,7 +18,7 @@ const navArray: NavLink[] = [
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   return (
-    <section className="p-5 flex items-center justify-between w-full fixed top-0 left-0 z-10 border border-dashed border-b-white/20 border-transparent bg-black">
+    <section className="p-5 flex items-center justify-between w-full fixed z-50 top-0 left-0 border border-dashed border-b-white/20 border-transparent bg-black">
       <Logo />
       <nav className=" text-white hidden md:flex md:flex-row gap-4 justify-center uppercase w-[80%] md:w-full mr-20 absolute md:static top-[6rem] left-0 p-2 md:p-0 z-30 bg-slate-900 md:bg-black">
         {navArray.map((navLink, index) => (
@@ -36,7 +36,7 @@ export default function Navbar() {
       </button>
 
       <div
-        className={`backdrop-blur-sm text-black text-3xl bg-slate-900/60 rounded-sm overflow-hidden md:hidden transition-all fixed top-0 right-0 z-20 h-screen  ${
+        className={`backdrop-blur-sm text-black text-3xl bg-slate-900/60 rounded-sm overflow-hidden md:hidden transition-all fixed top-0 right-0 z-50 h-screen  ${
           showMenu ? "w-full p-4" : "w-0"
         }`}
       >

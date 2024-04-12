@@ -35,10 +35,21 @@ import SkillPhotoContainer from "./SkillPhotoContainer.astro";
 >
 </div> -->
 
-  <h1 class="text-2xl text-start w-full group-hover:text-cyan-400">
-    <span class="group-hover:text-3xl transition-all">❤️</span> About me and My Skills
-  </h1>
-  <div class="w-full md:hidden"><SkillPhotoContainer /></div>
+  <div
+    class="text-start w-full flex items-end gap-2 relative border border-b-white/20 border-transparent border-dashed pb-2"
+  >
+    <h1 class="text-2xl pl-10">About me and My Skills</h1>
+    <div
+      class="rounded-full border border-dashed border-white/20 absolute h-12 w-12 -top-3 -left-2 flex justify-center items-center"
+    >
+      <span class="text-3xl">❤️</span>
+    </div>
+    <div
+      class="h-20 w-1 border border-dashed border-l-white/20 border-transparent absolute left-4 -top-5 -z-10"
+    >
+    </div>
+  </div>
+  <div class="w-[80%] md:hidden"><SkillPhotoContainer /></div>
   <!-- <hr class="rounded-full bg-cyan-400 w-full" /> -->
   <p class="text-[1rem] font-thin leading-normal px-2 mt-1">
     I am a <kbd class="text-cyan-400">Web developer</kbd> passionate about technology
@@ -49,16 +60,25 @@ import SkillPhotoContainer from "./SkillPhotoContainer.astro";
     <SkillTitle title="Design">
       <DesignIcon />
     </SkillTitle>
-    <div class="grid grid-cols-3">
+    <div
+      class="bg-gradient-to-r from-white to-black pt-[1px] border border-black"
+    >
       <div
-        class="border-r-white/20 border-transparent border border-dashed p-1"
+        class="grid grid-cols-2 md:grid-cols-3 bg-black pt-1 border border-black"
       >
-        <SkillItem title="Figma">
-          <FigmaIcon />
-        </SkillItem>
+        <div
+          class="border-r-white/20 border-transparent border border-dashed p-1"
+        >
+          <SkillItem title="Figma">
+            <FigmaIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="border-r-white/20 border-transparent border border-dashed p-1"
+        >
+        </div>
+        <div class="p-1"></div>
       </div>
-      <div class="p-1"></div>
-      <div class="p-1"></div>
     </div>
   </SkillLayoutContainer>
   <!-- Languages -->
@@ -66,26 +86,38 @@ import SkillPhotoContainer from "./SkillPhotoContainer.astro";
     <SkillTitle title="Languages">
       <LanguagesIcon />
     </SkillTitle>
-    <div class="grid grid-cols-3">
+    <div
+      class="bg-gradient-to-r from-white to-black pt-[1px] border border-black"
+    >
       <div
-        class="border-r-white/20 border-transparent border border-dashed p-1"
+        class="grid grid-cols-2 md:grid-cols-3 bg-black pt-1 border border-black"
       >
-        <SkillItem title="JavaScript">
-          <JSIcon />
-        </SkillItem>
-      </div>
-      <div
-        class="border-r-white/20 border-transparent border border-dashed p-1"
-      >
-        <SkillItem title="TypeScript">
-          <TSIcon />
-        </SkillItem>
-      </div>
+        <div
+          class="border-r-white/20 border-transparent border border-dashed p-1"
+        >
+          <SkillItem title="JavaScript">
+            <JSIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="border-r-black md:border-r-white/20 border-b-white/20 md:border-b-black border-transparent border border-dashed p-1"
+        >
+          <SkillItem title="TypeScript">
+            <TSIcon />
+          </SkillItem>
+        </div>
 
-      <div class="p-1">
-        <SkillItem title="Python">
-          <PythonIcon />
-        </SkillItem>
+        <div
+          class="p-1 border border-dashed border-t-white/20 md:border-t-black border-transparent border-r-white/20 md:border-r-black"
+        >
+          <SkillItem title="Python">
+            <PythonIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="p-1 border border-dashed border-t-white/20 md:border-t-black border-transparent border-r-white/20 md:border-r-black"
+        >
+        </div>
       </div>
     </div>
   </SkillLayoutContainer>
@@ -94,66 +126,72 @@ import SkillPhotoContainer from "./SkillPhotoContainer.astro";
     <SkillTitle title="Frontend">
       <FrontendIcon />
     </SkillTitle>
-    <div class="grid grid-cols-3">
+    <div
+      class="bg-gradient-to-r from-white to-black pt-[1px] border border-black"
+    >
       <div
-        class="border-r-white/20 border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
+        class="grid grid-cols-2 md:grid-cols-3 bg-black pt-1 border border-black"
       >
-        <SkillItem title="React">
-          <ReactIcon />
-        </SkillItem>
-      </div>
-      <div
-        class="border-r-white/20 border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
-      >
-        <SkillItem title="Next.js">
-          <NextIcon />
-        </SkillItem>
-      </div>
-      <div
-        class="border-r-transparent border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
-      >
-        <SkillItem title="HTML">
-          <HTMLIcon />
-        </SkillItem>
-      </div>
-      <div
-        class="border-r-white/20 border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
-      >
-        <SkillItem title="CSS">
-          <CSSIcon />
-        </SkillItem>
-      </div>
-      <div
-        class="border-r-white/20 border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
-      >
-        <SkillItem title="Tailwind">
-          <TailwindIcon />
-        </SkillItem>
-      </div>
-      <div
-        class="border-r-transparent border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
-      >
-        <SkillItem title="Sass">
-          <SassIcon />
-        </SkillItem>
-      </div>
-      <div
-        class="border-r-white/20 border-b-transparent border-l-transparent border-t-transparent border border-dashed p-1"
-      >
-        <SkillItem title="Vite.js">
-          <ViteIcon />
-        </SkillItem>
-      </div>
-      <div
-        class="border-r-white/20 border-b-transparent border-l-transparent border-t-transparent border border-dashed p-1"
-      >
-        <SkillItem title="Zustand">
-          <ZustandIcon />
-        </SkillItem>
-      </div>
-      <div
-        class="border-r-transparent border-b-transparent border-l-transparent border-t-transparent border border-dashed p-1"
-      >
+        <div
+          class="border-r-white/20 border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
+        >
+          <SkillItem title="React">
+            <ReactIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="border-r-black md:border-r-white/20 border-b-white/20 md:border-l-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
+        >
+          <SkillItem title="Next.js">
+            <NextIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="border-r-white/20 md:border-r-transparent border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
+        >
+          <SkillItem title="HTML">
+            <HTMLIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="border-r-white/20 border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
+        >
+          <SkillItem title="CSS">
+            <CSSIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="border-r-white/20 border-b-white/20 border-l-transparent border-t-white/20 md:border-t-transparent border border-dashed p-1"
+        >
+          <SkillItem title="Tailwind">
+            <TailwindIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="border-r-transparent border-b-white/20 border-l-transparent border-t-white/20 md:border-t-transparent border border-dashed p-1"
+        >
+          <SkillItem title="Sass">
+            <SassIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="border-r-white/20 border-b-transparent border-l-transparent border-t-transparent border border-dashed p-1"
+        >
+          <SkillItem title="Vite.js">
+            <ViteIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="border-r-white/20 border-b-transparent border-l-transparent border-t-transparent border border-dashed p-1"
+        >
+          <SkillItem title="Zustand">
+            <ZustandIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="border-r-transparent border-b-transparent border-l-transparent border-t-transparent border border-dashed p-1"
+        >
+        </div>
       </div>
     </div>
   </SkillLayoutContainer>
@@ -162,42 +200,48 @@ import SkillPhotoContainer from "./SkillPhotoContainer.astro";
     <SkillTitle title="Backend">
       <BackendIcon />
     </SkillTitle>
-    <div class="grid grid-cols-3">
+    <div
+      class="bg-gradient-to-r from-white to-black pt-[1px] border border-black"
+    >
       <div
-        class="border-r-white/20 border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
+        class="grid grid-cols-2 md:grid-cols-3 bg-black pt-1 border border-black"
       >
-        <SkillItem title="Node.js">
-          <NodeIcon />
-        </SkillItem>
-      </div>
-      <div
-        class="border-r-white/20 border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
-      >
-        <SkillItem title="Express">
-          <ExpressIcon />
-        </SkillItem>
-      </div>
-      <div
-        class="border-r-transparent border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
-      >
-        <SkillItem title="MySQL">
-          <MySQLIcon />
-        </SkillItem>
-      </div>
-      <div
-        class="border-r-white/20 border-b-transparent border-l-transparent border-t-transparent border border-dashed p-1"
-      >
-        <SkillItem title="MongDB">
-          <MongoDBIcon />
-        </SkillItem>
-      </div>
-      <div
-        class="border-r-white/20 border-b-transparent border-l-transparent border-t-transparent border border-dashed p-1"
-      >
-      </div>
-      <div
-        class="border-r-transparent border-b-transparent border-l-transparent border-t-transparent border border-dashed p-1"
-      >
+        <div
+          class="border-r-white/20 border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
+        >
+          <SkillItem title="Node.js">
+            <NodeIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="border-r-white/20 border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
+        >
+          <SkillItem title="Express">
+            <ExpressIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="border-r-white/20 md:border-r-transparent border-b-transparent md:border-b-white/20 border-l-transparent border-t-transparent border border-dashed p-1"
+        >
+          <SkillItem title="MySQL">
+            <MySQLIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="border-r-white/20 border-b-transparent border-l-transparent border-t-transparent border border-dashed p-1"
+        >
+          <SkillItem title="MongDB">
+            <MongoDBIcon />
+          </SkillItem>
+        </div>
+        <div
+          class="border-r-white/20 border-b-transparent border-l-transparent border-t-transparent border border-dashed p-1"
+        >
+        </div>
+        <div
+          class="border-r-transparent border-b-transparent border-l-transparent border-t-transparent border border-dashed p-1"
+        >
+        </div>
       </div>
     </div>
   </SkillLayoutContainer>

@@ -1,0 +1,22 @@
+---
+import CardProject from "./projects/CardProject.astro";
+import SkillPhotoContainer from "./skills/SkillPhotoContainer.astro";
+---
+
+<section id="projects" class="md:pt-[8rem] mt-[8rem]">
+  <div
+    class="text-start w-full flex items-end gap-2 relative border border-b-white/20 border-transparent border-dashed pb-2"
+  >
+    <h1 class="text-2xl pl-10">Projects in I was working...</h1>
+    <div
+      class="rounded-full border border-dashed border-white/20 absolute h-12 w-12 -top-3 -left-2 flex justify-center items-center"
+    >
+      <span class="text-3xl">❤️</span>
+    </div>
+    <div
+      class="h-20 w-1 border border-dashed border-l-white/20 border-transparent absolute left-4 -top-5 -z-10"
+    >
+    </div>
+  </div>
+  <CardProject />
+</section>

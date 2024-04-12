@@ -1,6 +1,6 @@
 export default function Logo() {
   return (
-    <a href="/">
+    <a href="#about">
       <div className="flex items-center gap-0 text-4xl cursor-pointer">
         <svg
           width="1em"
