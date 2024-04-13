@@ -1,0 +1,42 @@
+---
+import SubTitleLayout from "../../../layouts/SubTitleLayout.astro";
+import TechContainer from "../projects/TechContainer.astro";
+
+interface Props {
+  title: string;
+  modality: string;
+}
+
+const { title, modality } = Astro.props;
+---
+
+<div
+  class="border border-dashed border-y-white/20 border-transparent w-full h-full relative"
+>
+  <!-- decorations -->
+  <div
+    class="absolute h-20 w-20 border border-dashed border-white/20 rounded-full -right-10 -z-10"
+  >
+  </div>
+  <div
+    class="absolute h-48 w-48 border border-dashed border-white/20 rounded-full -top-16 -left-10 -z-10"
+  >
+  </div>
+  <!-- decorations -->
+  <div class="w-full">
+    <SubTitleLayout>
+      <div class="flex gap-2 items-center justify-between">
+        <div class="flex items-center gap-4">
+          {title}
+          <slot name="support" />
+        </div>
+        <TechContainer techLabel={modality}>
+          <slot name="icon-modality" />
+        </TechContainer>
+      </div>
+    </SubTitleLayout>
+    <div class="p-2">
+      <slot name="description" />
+    </div>
+  </div>
+</div>

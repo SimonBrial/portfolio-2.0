@@ -1,0 +1,106 @@
+---
+import TitleLayout from "../../layouts/TitleLayout.astro";
+import CellIcon from "../icons/CellIcon.astro";
+import LearningIcon from "../icons/LearningIcon.astro";
+import PCIcon from "../icons/PCIcon.astro";
+import RemoteIcon from "../icons/RemoteIcon.astro";
+import OpenIcon from "../icons/OpenIcon.astro";
+import DateContainer from "./DateContainer.astro";
+import ExperienceCard from "./work/ExperienceCard.astro";
+---
+
+<section id="experience" class="py-[6rem]">
+  <div
+    class="w-full h-full flex justify-center items-center flex-col border-b-white/20 border-t-white/20 border-dashed border border-transparent"
+  >
+    <TitleLayout title="work Experience" />
+    <div class="w-full md:w-2/3 p-2">
+      <div class="w-full grid grid-cols-5 gap-4">
+        <div class="col-span-1">
+          <div class="grid grid-rows-3 gap-2 h-full">
+            <div
+              class="row-span-2 p-1 flex flex-col justify-center cursor-default"
+            >
+              <DateContainer>
+                <h3
+                  slot="until"
+                  class="border border-dashed border-b-white/20 border-transparent w-full text-end"
+                >
+                  Until now
+                </h3>
+
+                <div slot="since" class="text-end w-full">
+                  <h3
+                    class="border border-dashed border-b-white/20 border-transparent"
+                  >
+                    Since
+                  </h3>
+                  <p class="pt-1">July - 2023</p>
+                </div>
+              </DateContainer>
+            </div>
+            <div
+              class="row-span-1 border border-dashed border-t-white/20 border-transparent"
+            >
+              <DateContainer>
+                <h3 slot="until"></h3>
+                <div slot="since" class="text-end w-full">
+                  <h3
+                    class="border border-dashed border-b-white/20 border-transparent"
+                  >
+                    Since
+                  </h3>
+                  <p class="pt-1">2020</p>
+                </div>
+              </DateContainer>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-4">
+          <div class="grid grid-rows-3 gap-2">
+            <ExperienceCard title="Shaddai App" modality="Freelancer - Remoto">
+              <span slot="support" class="flex items-center gap-2"
+                ><PCIcon /><CellIcon /></span
+              >
+              <span slot="icon-modality"><RemoteIcon /></span>
+              <p slot="description">
+                This has been a responsive web application with the objective of
+                being able to manage all inventory to improve expenses. This
+                application was developed together with a colleague, he was in
+                charge of the backend.
+              </p>
+            </ExperienceCard>
+            <ExperienceCard title="ServiOriente" modality="Freelancer - Remoto">
+              <span slot="support"><PCIcon /></span>
+              <span slot="icon-modality"><RemoteIcon /></span>
+              <p slot="description">
+                Working as FrontEnd Developer and UI/UX Designer, developing a
+                CRM for the administration and centralization of social networks
+                or media with current and potential clients. It has been
+                developed in technologies such as Next.js, TypeScript and
+                Mantine UI, in addition to Zustand for global state management.
+              </p>
+            </ExperienceCard>
+            <ExperienceCard title="Practice's Projects" modality="Autodidactic">
+              <span slot="support" class="flex items-center gap-2"
+                ><PCIcon /><CellIcon /></span
+              >
+              <span slot="icon-modality"><LearningIcon /></span>
+              <p slot="description">
+                I have created certain projects as a practice to test the
+                knowledge learned through hours of study with videos from
+                Platzi, Udemy and YouTube, in addition to materials such as
+                books and documents that I have read. Some projects are shown in
+                the <span class="flex items-center gap-2"
+                  >projects section. <a href="#projects" class="text-lg"
+                    ><OpenIcon /></a
+                  ></span
+                >
+              </p>
+            </ExperienceCard>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

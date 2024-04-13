@@ -11,6 +11,7 @@ interface NavLink {
 const navArray: NavLink[] = [
   { dir: "#about", title: "about me" },
   { dir: "#skills", title: "skills" },
+  { dir: "#experience", title: "Work Experience" },
   { dir: "#projects", title: "projects" },
   { dir: "#interesses", title: "interesses" },
 ];
