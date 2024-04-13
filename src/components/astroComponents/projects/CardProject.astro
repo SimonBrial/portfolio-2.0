@@ -1,1 +1,127 @@
-<div class="border border-red-500">container of my projects</div>
+---
+import CSSIcon from "../../icons/CSSIcon.astro";
+import MantineIcon from "../../icons/MantineIcon.astro";
+import NextIcon from "../../icons/NextIcon.astro";
+import OpenIcon from "../../icons/OpenIcon.astro";
+import TSIcon from "../../icons/TSIcon.astro";
+import ZustandIcon from "../../icons/ZustandIcon.astro";
+import TechContainer from "./TechContainer.astro";
+---
+
+<div class="flex flex-col md:flex-row gap-4">
+  <div
+    class="relative h-[20rem] w-full md:w-1/2 overflow-hidden parent-container p-[1px]"
+  >
+    <div
+      class="absolute z-20 text-3xl right-3 bottom-3 cursor-pointer flex flex-row md:flex-col items-center gap-2"
+    >
+      <OpenIcon />
+
+      <svg
+        class="text-white/50 hover:text-cyan-400 transition-all"
+        width="1em"
+        height="1em"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill="currentColor"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59c.4.07.55-.17.55-.38c0-.19-.01-.82-.01-1.49c-2.01.37-2.53-.49-2.69-.94c-.09-.23-.48-.94-.82-1.13c-.28-.15-.68-.52-.01-.53c.63-.01 1.08.58 1.23.82c.72 1.21 1.87.87 2.33.66c.07-.52.28-.87.51-1.07c-1.78-.2-3.64-.89-3.64-3.95c0-.87.31-1.59.82-2.15c-.08-.2-.36-1.02.08-2.12c0 0 .67-.21 2.2.82c.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82c.44 1.1.16 1.92.08 2.12c.51.56.82 1.27.82 2.15c0 3.07-1.87 3.75-3.65 3.95c.29.25.54.73.54 1.48c0 1.07-.01 1.93-.01 2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+        ></path>
+      </svg>
+      <svg
+        class="text-white/50 hover:text-cyan-400 transition-all"
+        width="1em"
+        height="1em"
+        viewBox="0 0 24 24"
+        ><g fill="none" stroke="currentColor" stroke-width="1.5"
+          ><path
+            d="M12 2H8.667a3.333 3.333 0 1 0 0 6.667H12zm0 6.667H8.667a3.333 3.333 0 0 0 0 6.666H12z"
+          ></path><path
+            d="M18.667 12A3.333 3.333 0 1 1 12 12a3.333 3.333 0 0 1 6.667 0Zm-10 3.334H12v3.333a3.333 3.333 0 1 1-3.333-3.334Z"
+          ></path><path d="M12 2h3.333a3.333 3.333 0 1 1 0 6.667H12z"></path></g
+        >
+      </svg>
+    </div>
+    <div
+      class="w-[99.7%] h-[99.5%] absolute border border-transparent bg-black"
+    >
+      <img
+        src="img/so2-img.png"
+        alt="so design!"
+        class="container h-[19.8rem] w-full"
+      />
+    </div>
+    <div
+      class="absolute z-10 h-full w-full bg-gradient-to-t from-black to-transparent bottom-[1px]"
+    >
+      <h1
+        class="absolute bottom-3 md:bottom-5 left-5 text-3xl border border-dashed border-b-white/20 border-transparent w-[85%]"
+      >
+        CRM Social Media App
+      </h1>
+      <span
+        class="absolute rounded-full border border-dashed border-white/20 h-20 w-20 right-[35%] bottom-0 z-20"
+      >
+      </span>
+      <span
+        class="absolute rounded-full border border-dashed border-white/20 h-16 w-16 right-[25%] bottom-0 z-20"
+      >
+      </span>
+      <span
+        class="absolute rounded-full border border-dashed border-white/20 h-28 w-28 left-5 bottom-0 z-20"
+      >
+      </span>
+    </div>
+  </div>
+  <div class="w-full md:w-1/2">
+    <div
+      class="bg-gradient-to-r from-white to-black pb-[1px] border border-black"
+    >
+      <h2 class="bg-black pb-1 border border-black">Description</h2>
+    </div>
+    <div
+      class="border border-dashed border-t-white/20 border-b-white/20 border-transparent p-2 my-2"
+    >
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+        assumenda repellat delectus aspernatur quibusdam similique, voluptates
+        perspiciatis, amet optio sed natus quaerat architecto aliquid nulla
+        eius. Illum animi inventore distinctio?
+      </p>
+    </div>
+    <div
+      class="bg-gradient-to-r from-white to-black pb-[1px] border border-black"
+    >
+      <h2 class="bg-black pb-1 border border-black">Technologies</h2>
+    </div>
+    <div class="flex gap-2 items-center flex-wrap mt-2">
+      <TechContainer techLabel="Next.js">
+        <NextIcon />
+      </TechContainer>
+      <TechContainer techLabel="Mantine UI">
+        <MantineIcon />
+      </TechContainer>
+      <TechContainer techLabel="Zustand">
+        <ZustandIcon />
+      </TechContainer>
+      <TechContainer techLabel="TypeScript">
+        <TSIcon />
+      </TechContainer>
+      <TechContainer techLabel="CSS">
+        <CSSIcon />
+      </TechContainer>
+    </div>
+  </div>
+</div>
+<style>
+  .container {
+    /* transform: rotateY(60deg);
+    transform: skewX(45deg); */
+    width: 100%;
+  }
+
+  .parent-container {
+    background: #ffffff;
+    background: radial-gradient(at left top, #ffffff, #010101);
+  }
+</style>
