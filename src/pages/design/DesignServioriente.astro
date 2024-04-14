@@ -1,0 +1,60 @@
+---
+import TechContainer from "../../components/astroComponents/projects/TechContainer.astro";
+import CSSIcon from "../../components/icons/CSSIcon.astro";
+import MantineIcon from "../../components/icons/MantineIcon.astro";
+import NextIcon from "../../components/icons/NextIcon.astro";
+import ReactIcon from "../../components/icons/ReactIcon.astro";
+import TSIcon from "../../components/icons/TSIcon.astro";
+import ZustandIcon from "../../components/icons/ZustandIcon.astro";
+import SubTitleLayout from "../../layouts/SubTitleLayout.astro";
+import TitleLayout from "../../layouts/TitleLayout.astro";
+---
+
+<div
+  class="border border-dashed border-y-white/20 border-transparent py-5 flex flex-col sm:flex-row gap-4"
+>
+  <div class="w-full md:w-1/2 p-2">
+    <TitleLayout title="ServiOriente App" />
+    <div
+      class="w-full border border-dashed border-t-white/20 border-b-white/20 border-transparent my-2"
+    >
+      <SubTitleLayout><h2>Description</h2></SubTitleLayout>
+      <p class="px-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+        assumenda repellat delectus aspernatur quibusdam similique, voluptates
+        perspiciatis, amet optio sed natus quaerat architecto aliquid nulla
+        eius. Illum animi inventore distinctio?
+      </p>
+    </div>
+    <div
+      class="bg-gradient-to-r from-white to-black pb-[1px] border border-black"
+    >
+      <h2 class="bg-black pb-1 border border-black">Technologies</h2>
+    </div>
+    <div class="flex gap-2 items-center flex-wrap mt-2 px-2">
+      <TechContainer techLabel="Next.js">
+        <NextIcon />
+      </TechContainer>
+      <TechContainer techLabel="Mantine UI">
+        <MantineIcon />
+      </TechContainer>
+      <TechContainer techLabel="Zustand">
+        <ZustandIcon />
+      </TechContainer>
+      <TechContainer techLabel="TypeScript">
+        <TSIcon />
+      </TechContainer>
+      <TechContainer techLabel="CSS">
+        <CSSIcon />
+      </TechContainer>
+    </div>
+  </div>
+  <div class="w-full md:w-1/2 h-[450px]">
+    <iframe
+      style="border: 1px solid rgba(0, 0, 0, 0.1);"
+      width="100%"
+      height="450"
+      src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FGbSYWZ9a808aj2OHsisV7a%2FServiOriente%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DK5VJAPOJ4OU0XGbT-1"
+      allowfullscreen></iframe>
+  </div>
+</div>

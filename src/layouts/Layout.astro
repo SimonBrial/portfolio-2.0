@@ -20,14 +20,19 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="flex justify-center items-center">
     <Navbar client:load />
     <main
-      class="pt-[0rem] pl-[3.5rem] pr-[1.5rem] md:pt-[0rem] md:px-[8rem] h-screen w-full"
+      class="pt-[0rem] md:pt-[0rem] px-[1rem] md:px-[8rem] h-screen w-full -mr-[2rem] md:mr-0"
     >
       <slot />
     </main>
     <SocialMediaContainer />
+    <div class="block fixed z-20 right-2 md:right-8 bottom-10">
+      <p class="[writing-mode:vertical-lr] text-md rotate-180">
+        simon.antonio.ba18@gmail.com
+      </p>
+    </div>
   </body>
 </html>
 <style is:global>

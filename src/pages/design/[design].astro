@@ -1,0 +1,24 @@
+---
+import DesignLayout from "../../layouts/DesignLayout.astro";
+import DesignServioriente from "./DesignServioriente.astro";
+import DesignShaddai from "./DesignShaddai.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { design: "shaddai-app" } },
+    { params: { design: "servioriente-app" } },
+  ];
+}
+
+const { design } = Astro.params;
+---
+
+<DesignLayout title="Simon Briceño ❤️">
+  <section
+    class="bg-black h-screen px-[1rem] mr-[1.5rem] md:p-[5rem] pt-[3rem] text-white"
+  >
+    <div class="md:p-10 bg-black">
+      {design === "shaddai-app" ? <DesignShaddai /> : <DesignServioriente />}
+    </div>
+  </section>
+</DesignLayout>

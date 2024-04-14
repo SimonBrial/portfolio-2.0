@@ -1,0 +1,30 @@
+---
+import AstroIcon from "../icons/AstroIcon.astro";
+import GithubIcon from "../icons/GithubIcon.astro";
+import InstagramIcon from "../icons/InstagramIcon.astro";
+import LinkdinIcon from "../icons/LinkdinIcon.astro";
+import XIcon from "../icons/XIcon.astro";
+---
+
+<footer
+  class="w-full flex flex-col items-center justify-center py-10 border border-dashed border-y-white/20 border-transparent"
+>
+  <div
+    class="md:hidden flex justify-center text-3xl gap-8 pb-2 mb-10 w-[50%] border border-b-white/20 border-dashed border-transparent"
+  >
+    <a href="https://github.com/SimonBrial" target="_blank"><GithubIcon /></a>
+    <a
+      href="https://www.linkedin.com/in/simon-brice%C3%B1o-618555189/"
+      target="_blank"><LinkdinIcon /></a
+    >
+    <a href="https://twitter.com/SimonBrial" target="_blank"><XIcon /></a>
+    <a href="https://www.instagram.com/simonbrial.tsx/" target="_blank"
+      ><InstagramIcon /></a
+    >
+  </div>
+  <div>
+    <h3>Powered by</h3>
+    <span class="text-[5rem]"><AstroIcon /></span>
+  </div>
+  <p>ALL RIGHTS RESERVED ©</p>
+</footer>

@@ -1,0 +1,194 @@
+---
+import TitleLayout from "../../../layouts/TitleLayout.astro";
+import CellIcon from "../../icons/CellIcon.astro";
+import CSSIcon from "../../icons/CSSIcon.astro";
+import HTMLIcon from "../../icons/HTMLIcon.astro";
+import JSIcon from "../../icons/JSIcon.astro";
+import PCIcon from "../../icons/PCIcon.astro";
+import ReactIcon from "../../icons/ReactIcon.astro";
+import SassIcon from "../../icons/SassIcon.astro";
+import TailwindIcon from "../../icons/TailwindIcon.astro";
+import TSIcon from "../../icons/TSIcon.astro";
+import OtherProjectsCard from "./OtherProjectsCard.astro";
+import TechContainer from "./TechContainer.astro";
+---
+
+<section class="h-full py-[6rem]">
+  <TitleLayout title="Other projects I have developed..." />
+  <div class="md:p-5 flex flex-col md:grid grid-cols-1 md:grid-cols-3 gap-4">
+    <OtherProjectsCard
+      title="Dnd kit Example"
+      figma=""
+      github="https://github.com/SimonBrial/dndkit-guide"
+      projectUrl="https://dnd-kit-example-gamma.vercel.app/"
+    >
+      <span slot="responsive" class="flex items-center gap-2">
+        <PCIcon />
+      </span>
+      <p slot="description" class="py-1 text-sm md:text-md">
+        Project created with the objective of practicing with DnD kit library,
+        for a project where I had to implement this library.
+      </p>
+      <div
+        class="flex gap-2 items-center flex-wrap mt-2 pt-0 p-2"
+        slot="technologies"
+      >
+        <TechContainer techLabel="React">
+          <ReactIcon />
+        </TechContainer>
+        <TechContainer techLabel="Tailwind">
+          <TailwindIcon />
+        </TechContainer>
+        <TechContainer techLabel="TypeScript">
+          <TSIcon />
+        </TechContainer>
+      </div>
+    </OtherProjectsCard>
+    <OtherProjectsCard
+      title="Psy Fake Store"
+      figma=""
+      github="https://github.com/SimonBrial/fake-commerce"
+      projectUrl="https://silly-croquembouche-f5a503.netlify.app/"
+    >
+      <span slot="responsive" class="flex items-center gap-2">
+        <PCIcon /><CellIcon />
+      </span>
+      <p slot="description" class="py-1 text-sm md:text-md">
+        Project created with the objective of practicing the manipulation of
+        global context and typescript.
+      </p>
+      <div
+        class="flex gap-2 items-center flex-wrap mt-2 pt-0 p-2"
+        slot="technologies"
+      >
+        <TechContainer techLabel="React">
+          <ReactIcon />
+        </TechContainer>
+        <TechContainer techLabel="Tailwind">
+          <TailwindIcon />
+        </TechContainer>
+        <TechContainer techLabel="TypeScript">
+          <TSIcon />
+        </TechContainer>
+      </div>
+    </OtherProjectsCard>
+    <OtherProjectsCard
+      title="Weather App"
+      figma=""
+      github="https://github.com/SimonBrial/WeatherApp-2.0-ts"
+      projectUrl="https://weather-app-2-0-ts.vercel.app/"
+    >
+      <span slot="responsive" class="flex items-center gap-2">
+        <PCIcon /><CellIcon />
+      </span>
+      <p slot="description" class="py-1 text-sm md:text-md">
+        Project created with the objective of practicing the manipulation of
+        global context, typescript and sass.
+      </p>
+      <div
+        class="flex gap-2 items-center flex-wrap mt-2 pt-0 p-2"
+        slot="technologies"
+      >
+        <TechContainer techLabel="React">
+          <ReactIcon />
+        </TechContainer>
+        <TechContainer techLabel="Sass">
+          <SassIcon />
+        </TechContainer>
+        <TechContainer techLabel="TypeScript">
+          <TSIcon />
+        </TechContainer>
+      </div>
+    </OtherProjectsCard>
+    <OtherProjectsCard
+      title="Bienes Raices"
+      figma=""
+      github="https://github.com/SimonBrial/Practicas-y-proyectos-en-JavaScript/tree/main/Bienes%20Raices"
+      projectUrl="https://inmuebles-practica.netlify.app/"
+    >
+      <span slot="responsive" class="flex items-center gap-2">
+        <PCIcon /><CellIcon />
+      </span>
+      <p slot="description" class="py-1 text-sm md:text-md">
+        This project was part of my first practices with javascript, css and
+        html.
+      </p>
+      <div
+        class="flex gap-2 items-center flex-wrap mt-2 pt-0 p-2"
+        slot="technologies"
+      >
+        <TechContainer techLabel="CSS">
+          <HTMLIcon />
+        </TechContainer>
+        <TechContainer techLabel="CSS">
+          <CSSIcon />
+        </TechContainer>
+        <TechContainer techLabel="JavaScript">
+          <JSIcon />
+        </TechContainer>
+      </div>
+    </OtherProjectsCard>
+    <OtherProjectsCard
+      title="GLD Web Camp"
+      figma=""
+      github="https://github.com/SimonBrial/Practicas-y-proyectos-en-JavaScript/tree/main/GDLWebCamp%20(HTML)"
+      projectUrl="https://gld-web-camp.netlify.app/"
+    >
+      <span slot="responsive" class="flex items-center gap-2">
+        <PCIcon /><CellIcon />
+      </span>
+      <p slot="description" class="py-1 text-sm md:text-md">
+        This project was part of my first practices with javascript, css and
+        html.
+      </p>
+      <div
+        class="flex gap-2 items-center flex-wrap mt-2 pt-0 p-2"
+        slot="technologies"
+      >
+        <TechContainer techLabel="CSS">
+          <HTMLIcon />
+        </TechContainer>
+        <TechContainer techLabel="CSS">
+          <CSSIcon />
+        </TechContainer>
+        <TechContainer techLabel="JavaScript">
+          <JSIcon />
+        </TechContainer>
+      </div>
+    </OtherProjectsCard>
+    <OtherProjectsCard
+      title="GLD Web Camp"
+      figma=""
+      github="https://github.com/SimonBrial/Practicas-y-proyectos-en-JavaScript/tree/main/GDLWebCamp%20(HTML)"
+      projectUrl="https://gld-web-camp.netlify.app/"
+    >
+      <span slot="responsive" class="flex items-center gap-2">
+        <PCIcon /><CellIcon />
+      </span>
+      <p slot="description" class="py-1 text-sm md:text-md">
+        This project was part of my first practices with javascript, css and
+        html.
+      </p>
+      <div
+        class="flex gap-2 items-center flex-wrap mt-2 pt-0 p-2"
+        slot="technologies"
+      >
+        <TechContainer techLabel="CSS">
+          <HTMLIcon />
+        </TechContainer>
+        <TechContainer techLabel="CSS">
+          <CSSIcon />
+        </TechContainer>
+        <TechContainer techLabel="JavaScript">
+          <JSIcon />
+        </TechContainer>
+      </div>
+    </OtherProjectsCard>
+
+    <div
+      class="w-full border border-y-white/20 border-dashed border-transparent py-2 col-span-3 text-center font-bold bg-gradient-to-r from-white to-black inline-block text-transparent bg-clip-text"
+    >
+      <h2 class="text-4xl">More projects comming soon...</h2>
+    </div>
+  </div>
+</section>

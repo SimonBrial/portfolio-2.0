@@ -1,32 +1,41 @@
 ---
+import { Image } from "astro:assets";
+
 import TitleLayout from "../../layouts/TitleLayout.astro";
-import CellIcon from "../icons/CellIcon.astro";
 import CSSIcon from "../icons/CSSIcon.astro";
-import HTMLIcon from "../icons/HTMLIcon.astro";
-import JSIcon from "../icons/JSIcon.astro";
 import MantineIcon from "../icons/MantineIcon.astro";
 import NextIcon from "../icons/NextIcon.astro";
-import PCIcon from "../icons/PCIcon.astro";
 import ReactIcon from "../icons/ReactIcon.astro";
-import SassIcon from "../icons/SassIcon.astro";
 import TailwindIcon from "../icons/TailwindIcon.astro";
 import TSIcon from "../icons/TSIcon.astro";
 import ZustandIcon from "../icons/ZustandIcon.astro";
 import CardProject from "./projects/CardProject.astro";
-import OtherProjectsCard from "./projects/OtherProjectsCard.astro";
 import TechContainer from "./projects/TechContainer.astro";
+// design/servioriente-app
+// design/shaddai-app
 ---
 
 <section id="projects" class="h-full py-[6rem]">
   <TitleLayout title="Projects I have been working on..." />
-  <div class="p-5 flex flex-col gap-6">
+  <div class="p-2 md:p-5 flex flex-col gap-6">
     <CardProject
-      img="img/so2-img.png"
       title="CRM Social Media App"
       projectUrl="https://servioriente-app.vercel.app/"
       github={"https://github.com/SimonBrial/Servioriente_app"}
       figma=""
     >
+      <div
+        slot="image"
+        class="w-[99.7%] h-[99.5%] absolute border border-transparent bg-black"
+      >
+        <Image
+          src="/img/so2-img.png"
+          alt="Servioriente App"
+          class="container h-[19.8rem] w-full"
+          width={500}
+          height={600}
+        />
+      </div>
       <p slot="description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
         assumenda repellat delectus aspernatur quibusdam similique, voluptates
@@ -52,12 +61,23 @@ import TechContainer from "./projects/TechContainer.astro";
       </div>
     </CardProject>
     <CardProject
-      img="img/shaddai_02.png"
       title="Shaddai App"
       projectUrl="https://shaddai-app-m1pz.vercel.app/"
       github={"https://github.com/SimonBrial/shaddai_app"}
       figma=""
     >
+      <div
+        slot="image"
+        class="w-[99.7%] h-[99.5%] absolute border border-transparent bg-black"
+      >
+        <Image
+          src="/img/shaddai_02.png"
+          alt="Shaddai App"
+          class="container h-[19.8rem] w-full"
+          width={500}
+          height={600}
+        />
+      </div>
       <p slot="description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
         assumenda repellat delectus aspernatur quibusdam similique, voluptates
@@ -79,185 +99,5 @@ import TechContainer from "./projects/TechContainer.astro";
         </TechContainer>
       </div>
     </CardProject>
-  </div>
-
-  <div class="py-10">
-    <TitleLayout title="Other projects I have developed..." />
-    <div class="md:p-5 flex flex-col md:grid grid-cols-1 md:grid-cols-3 gap-4">
-      <OtherProjectsCard
-        title="Dnd kit Example"
-        figma=""
-        github="https://github.com/SimonBrial/dndkit-guide"
-        projectUrl="https://dnd-kit-example-gamma.vercel.app/"
-      >
-        <span slot="responsive" class="flex items-center gap-2">
-          <PCIcon />
-        </span>
-        <p slot="description" class="py-1">
-          Project created with the objective of practicing with DnD kit library,
-          for a project where I had to implement this library.
-        </p>
-        <div
-          class="flex gap-2 items-center flex-wrap mt-2 pt-0 p-2"
-          slot="technologies"
-        >
-          <TechContainer techLabel="React">
-            <ReactIcon />
-          </TechContainer>
-          <TechContainer techLabel="Tailwind">
-            <TailwindIcon />
-          </TechContainer>
-          <TechContainer techLabel="TypeScript">
-            <TSIcon />
-          </TechContainer>
-        </div>
-      </OtherProjectsCard>
-      <OtherProjectsCard
-        title="Psy Fake Store"
-        figma=""
-        github="https://github.com/SimonBrial/fake-commerce"
-        projectUrl="https://silly-croquembouche-f5a503.netlify.app/"
-      >
-        <span slot="responsive" class="flex items-center gap-2">
-          <PCIcon /><CellIcon />
-        </span>
-        <p slot="description" class="py-1">
-          Project created with the objective of practicing the manipulation of
-          global context and typescript.
-        </p>
-        <div
-          class="flex gap-2 items-center flex-wrap mt-2 pt-0 p-2"
-          slot="technologies"
-        >
-          <TechContainer techLabel="React">
-            <ReactIcon />
-          </TechContainer>
-          <TechContainer techLabel="Tailwind">
-            <TailwindIcon />
-          </TechContainer>
-          <TechContainer techLabel="TypeScript">
-            <TSIcon />
-          </TechContainer>
-        </div>
-      </OtherProjectsCard>
-      <OtherProjectsCard
-        title="Weather App"
-        figma=""
-        github="https://github.com/SimonBrial/WeatherApp-2.0-ts"
-        projectUrl="https://weather-app-2-0-ts.vercel.app/"
-      >
-        <span slot="responsive" class="flex items-center gap-2">
-          <PCIcon /><CellIcon />
-        </span>
-        <p slot="description" class="py-1">
-          Project created with the objective of practicing the manipulation of
-          global context, typescript and sass.
-        </p>
-        <div
-          class="flex gap-2 items-center flex-wrap mt-2 pt-0 p-2"
-          slot="technologies"
-        >
-          <TechContainer techLabel="React">
-            <ReactIcon />
-          </TechContainer>
-          <TechContainer techLabel="Sass">
-            <SassIcon />
-          </TechContainer>
-          <TechContainer techLabel="TypeScript">
-            <TSIcon />
-          </TechContainer>
-        </div>
-      </OtherProjectsCard>
-      <OtherProjectsCard
-        title="Bienes Raices"
-        figma=""
-        github="https://github.com/SimonBrial/Practicas-y-proyectos-en-JavaScript/tree/main/Bienes%20Raices"
-        projectUrl="https://inmuebles-practica.netlify.app/"
-      >
-        <span slot="responsive" class="flex items-center gap-2">
-          <PCIcon /><CellIcon />
-        </span>
-        <p slot="description" class="py-1">
-          This project was part of my first practices with javascript, css and
-          html.
-        </p>
-        <div
-          class="flex gap-2 items-center flex-wrap mt-2 pt-0 p-2"
-          slot="technologies"
-        >
-          <TechContainer techLabel="CSS">
-            <HTMLIcon />
-          </TechContainer>
-          <TechContainer techLabel="CSS">
-            <CSSIcon />
-          </TechContainer>
-          <TechContainer techLabel="JavaScript">
-            <JSIcon />
-          </TechContainer>
-        </div>
-      </OtherProjectsCard>
-      <OtherProjectsCard
-        title="GLD Web Camp"
-        figma=""
-        github="https://github.com/SimonBrial/Practicas-y-proyectos-en-JavaScript/tree/main/GDLWebCamp%20(HTML)"
-        projectUrl="https://gld-web-camp.netlify.app/"
-      >
-        <span slot="responsive" class="flex items-center gap-2">
-          <PCIcon /><CellIcon />
-        </span>
-        <p slot="description" class="py-1">
-          This project was part of my first practices with javascript, css and
-          html.
-        </p>
-        <div
-          class="flex gap-2 items-center flex-wrap mt-2 pt-0 p-2"
-          slot="technologies"
-        >
-          <TechContainer techLabel="CSS">
-            <HTMLIcon />
-          </TechContainer>
-          <TechContainer techLabel="CSS">
-            <CSSIcon />
-          </TechContainer>
-          <TechContainer techLabel="JavaScript">
-            <JSIcon />
-          </TechContainer>
-        </div>
-      </OtherProjectsCard>
-      <OtherProjectsCard
-        title="GLD Web Camp"
-        figma=""
-        github="https://github.com/SimonBrial/Practicas-y-proyectos-en-JavaScript/tree/main/GDLWebCamp%20(HTML)"
-        projectUrl="https://gld-web-camp.netlify.app/"
-      >
-        <span slot="responsive" class="flex items-center gap-2">
-          <PCIcon /><CellIcon />
-        </span>
-        <p slot="description" class="py-1">
-          This project was part of my first practices with javascript, css and
-          html.
-        </p>
-        <div
-          class="flex gap-2 items-center flex-wrap mt-2 pt-0 p-2"
-          slot="technologies"
-        >
-          <TechContainer techLabel="CSS">
-            <HTMLIcon />
-          </TechContainer>
-          <TechContainer techLabel="CSS">
-            <CSSIcon />
-          </TechContainer>
-          <TechContainer techLabel="JavaScript">
-            <JSIcon />
-          </TechContainer>
-        </div>
-      </OtherProjectsCard>
-
-      <div
-        class="w-full border border-y-white/20 border-dashed border-transparent py-2 col-span-3 text-center font-bold bg-gradient-to-r from-white to-black inline-block text-transparent bg-clip-text"
-      >
-        <h2 class="text-4xl">More projects comming soon...</h2>
-      </div>
-    </div>
   </div>
 </section>

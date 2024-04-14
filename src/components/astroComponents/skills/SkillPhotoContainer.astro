@@ -1,10 +1,12 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
 <!-- Photo  -->
 <div class="flex h-full justify-center items-center px-4 md:p-2 relative">
-  <img
+  <Image
+    height={500}
+    width={350}
     src="/img/img-01.png"
     alt="Photo Cool 😎!"
     class="md:p-1 h-[20rem] w-full md:w-auto md:h-[40rem] grayscale aspect-auto"

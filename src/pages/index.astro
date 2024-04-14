@@ -1,4 +1,7 @@
 ---
+import FooterContainer from "../components/astroComponents/FooterContainer.astro";
+import InteressesContainer from "../components/astroComponents/InteressesContainer.astro";
+import OtherProjectsContainer from "../components/astroComponents/projects/OtherProjectsContainer.astro";
 import ProjectsContainer from "../components/astroComponents/ProjectsContainer.astro";
 import SkillsContainer from "../components/astroComponents/SkillsContainer.astro";
 import UserDescription from "../components/astroComponents/UserDescription.astro";
@@ -8,16 +11,34 @@ import LayoutContainer from "../layouts/LayoutContainer.astro";
 ---
 
 <Layout title="Simon Briceño ❤️">
+  <!-- <h1 class="flex justify-center items-center h-full border border-red-500">
+    prueba
+  </h1> -->
   <LayoutContainer>
     <UserDescription />
   </LayoutContainer>
+
   <LayoutContainer>
     <SkillsContainer />
   </LayoutContainer>
+
   <LayoutContainer>
     <WorkExperienceContainer />
   </LayoutContainer>
+
   <LayoutContainer>
     <ProjectsContainer />
+  </LayoutContainer>
+
+  <LayoutContainer>
+    <OtherProjectsContainer />
+  </LayoutContainer>
+
+  <LayoutContainer>
+    <InteressesContainer />
+  </LayoutContainer>
+
+  <LayoutContainer>
+    <FooterContainer />
   </LayoutContainer>
 </Layout>

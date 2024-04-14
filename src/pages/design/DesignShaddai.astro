@@ -1,0 +1,54 @@
+---
+import TechContainer from "../../components/astroComponents/projects/TechContainer.astro";
+import ReactIcon from "../../components/icons/ReactIcon.astro";
+import TailwindIcon from "../../components/icons/TailwindIcon.astro";
+import TSIcon from "../../components/icons/TSIcon.astro";
+import ZustandIcon from "../../components/icons/ZustandIcon.astro";
+import TitleLayout from "../../layouts/TitleLayout.astro";
+---
+
+<div
+  class="w-full border border-dashed border-y-white/20 border-transparent py-5 flex flex-col md:flex-row gap-4"
+>
+  <div class="w-[60%]">
+    <TitleLayout title="Shaddai App" />
+    <div
+      class="border border-dashed border-t-white/20 border-b-white/20 border-transparent p-2 my-2"
+    >
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+        assumenda repellat delectus aspernatur quibusdam similique, voluptates
+        perspiciatis, amet optio sed natus quaerat architecto aliquid nulla
+        eius. Illum animi inventore distinctio?
+      </p>
+    </div>
+    <div
+      class="bg-gradient-to-r from-white to-black pb-[1px] border border-black"
+    >
+      <h2 class="bg-black pb-1 border border-black">Technologies</h2>
+    </div>
+    <div class="flex gap-2 items-center flex-wrap mt-2">
+      <TechContainer techLabel="React">
+        <ReactIcon />
+      </TechContainer>
+      <TechContainer techLabel="Tailwind">
+        <TailwindIcon />
+      </TechContainer>
+      <TechContainer techLabel="Zustand">
+        <ZustandIcon />
+      </TechContainer>
+      <TechContainer techLabel="TypeScript">
+        <TSIcon />
+      </TechContainer>
+    </div>
+  </div>
+  <div class="w-full">
+    <iframe
+      class="col-span-1"
+      style="border: 1px solid rgba(0, 0, 0, 0.1);"
+      width="100%"
+      height="450"
+      src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FqY0elK4EIEtQe1RDrIllBk%2FShaddai-App%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DpStRDwejoMb0B1qc-1"
+      allowfullscreen></iframe>
+  </div>
+</div>

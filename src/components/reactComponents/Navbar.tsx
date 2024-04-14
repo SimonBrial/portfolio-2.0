@@ -19,9 +19,11 @@ const navArray: NavLink[] = [
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   return (
-    <section className="p-5 flex items-center justify-between w-full fixed z-50 top-0 left-0 border border-dashed border-b-white/20 border-transparent bg-black">
-      <Logo />
-      <nav className=" text-white hidden md:flex md:flex-row gap-4 justify-center uppercase w-[80%] md:w-full mr-20 absolute md:static top-[6rem] left-0 p-2 md:p-0 z-30 bg-slate-900 md:bg-black">
+    <section className="p-2 md:p-5 flex items-center justify-between w-full fixed z-50 top-0 left-0 border border-dashed border-b-white/20 border-transparent bg-black">
+      <a href="#about">
+        <Logo />
+      </a>
+      <nav className=" text-white hidden md:flex md:flex-row gap-4 justify-center uppercase w-[80%] md:w-full mr-20 absolute md:static top-[6rem] left-0 p-2 md:p-0 z-30 bg-black">
         {navArray.map((navLink, index) => (
           <a
             key={index}
@@ -38,7 +40,7 @@ export default function Navbar() {
 
       <div
         className={`backdrop-blur-sm text-black text-3xl bg-slate-900/60 rounded-sm overflow-hidden md:hidden transition-all fixed top-0 right-0 z-50 h-screen  ${
-          showMenu ? "w-full p-4" : "w-0"
+          showMenu ? "w-full py-4" : "w-0"
         }`}
       >
         <div className="text-white absolute flex items-center justify-between w-full px-5 pr-10 border-dashed border border-b-white/20 border-transparent pb-2">
@@ -49,7 +51,10 @@ export default function Navbar() {
         </div>
         <nav className=" text-white flex flex-col flex-shrink gap-1 justify-center items-center text-center text-xl uppercase pt-14 p-2 w-full h-full">
           {navArray.map((navLink, index) => (
-            <div className="w-full border-dashed border border-b-white/20 border-transparent pb-1" key={index}>
+            <div
+              className="w-full border-dashed border border-b-white/20 border-transparent pb-1"
+              key={index}
+            >
               <a
                 href={navLink.dir}
                 className="hover:text-cyan-400 drop-shadow-xl hover:drop-shadow-2xl shadow-cyan-300 transition-all py-3  hover:bg-cyan-50/20 rounded-md w-full flex flex-shrink justify-center"

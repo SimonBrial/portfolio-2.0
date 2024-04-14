@@ -34,14 +34,8 @@ import NotionIcon from "../../icons/NotionIcon.astro";
 <div
   class="relative group w-full md:w-1/2 md:px-4 h-full flex flex-col justify-center items-center cursor-default mt-[2rem]"
 >
-  <!-- <div
-  class="border border-cyan-400 absolute w-3 h-[7rem] left-6 rounded-l-lg border-r-transparent"
->
-</div> -->
-
   <TitleLayout title="About me and My Skills" />
   <div class="w-[80%] md:hidden"><SkillPhotoContainer /></div>
-  <!-- <hr class="rounded-full bg-cyan-400 w-full" /> -->
   <p class="text-[1rem] font-thin leading-normal px-2 mt-1">
     I am a <kbd class="text-cyan-400">Web developer</kbd> passionate about technology
     and science, with the ability to continuously learn and take on new challenges.
@@ -173,10 +167,7 @@ import NotionIcon from "../../icons/NotionIcon.astro";
         class="border-r-transparent md:border-r-white/20 border-b-white/20 md:border-b-transparent border-l-transparent border-t-transparent border border-dashed p-1"
       >
         <SkillItem title="Astro.js">
-          <span
-            class="bg-white h-7 w-7 rounded-full flex items-center justify-center"
-            ><AstroIcon /></span
-          >
+          <AstroIcon />
         </SkillItem>
       </div>
       <div

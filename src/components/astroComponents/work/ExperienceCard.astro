@@ -26,7 +26,7 @@ const { title, modality } = Astro.props;
   <div class="w-full">
     <SubTitleLayout>
       <div class="flex gap-2 items-center justify-between">
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-1 md:gap-4 text-cyan-400">
           {title}
           <slot name="support" />
         </div>

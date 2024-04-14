@@ -13,8 +13,8 @@ import ExperienceCard from "./work/ExperienceCard.astro";
   <div
     class="w-full h-full flex justify-center items-center flex-col border-b-white/20 border-t-white/20 border-dashed border border-transparent"
   >
-    <TitleLayout title="work Experience" />
-    <div class="w-full md:w-2/3 p-2">
+    <TitleLayout title="Work Experience" />
+    <div class="w-full md:w-5/6 p-2">
       <div class="w-full grid grid-cols-5 gap-4">
         <div class="col-span-1">
           <div class="grid grid-rows-3 gap-2 h-full">
@@ -40,7 +40,7 @@ import ExperienceCard from "./work/ExperienceCard.astro";
               </DateContainer>
             </div>
             <div
-              class="row-span-1 border border-dashed border-t-white/20 border-transparent"
+              class="row-span-1 border border-dashed border-t-white border-transparent"
             >
               <DateContainer>
                 <h3 slot="until"></h3>
@@ -59,7 +59,9 @@ import ExperienceCard from "./work/ExperienceCard.astro";
         <div class="col-span-4">
           <div class="grid grid-rows-3 gap-2">
             <ExperienceCard title="Shaddai App" modality="Freelancer - Remoto">
-              <span slot="support" class="flex items-center gap-2"
+              <span
+                slot="support"
+                class="flex flex-col md:flex-row items-center gap-2 text-white"
                 ><PCIcon /><CellIcon /></span
               >
               <span slot="icon-modality"><RemoteIcon /></span>
@@ -71,7 +73,7 @@ import ExperienceCard from "./work/ExperienceCard.astro";
               </p>
             </ExperienceCard>
             <ExperienceCard title="ServiOriente" modality="Freelancer - Remoto">
-              <span slot="support"><PCIcon /></span>
+              <span slot="support" class="text-white"><PCIcon /></span>
               <span slot="icon-modality"><RemoteIcon /></span>
               <p slot="description">
                 Working as FrontEnd Developer and UI/UX Designer, developing a
@@ -82,7 +84,9 @@ import ExperienceCard from "./work/ExperienceCard.astro";
               </p>
             </ExperienceCard>
             <ExperienceCard title="Practice's Projects" modality="Autodidactic">
-              <span slot="support" class="flex items-center gap-2"
+              <span
+                slot="support"
+                class="flex flex-col md:flex-row items-center gap-2 text-white"
                 ><PCIcon /><CellIcon /></span
               >
               <span slot="icon-modality"><LearningIcon /></span>

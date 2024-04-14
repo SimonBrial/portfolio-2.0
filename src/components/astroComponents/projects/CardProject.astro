@@ -1,55 +1,41 @@
 ---
-import AstroIcon from "../../icons/AstroIcon.astro";
-import CSSIcon from "../../icons/CSSIcon.astro";
-import MantineIcon from "../../icons/MantineIcon.astro";
-import NextIcon from "../../icons/NextIcon.astro";
 import OpenIcon from "../../icons/OpenIcon.astro";
-import TSIcon from "../../icons/TSIcon.astro";
-import ZustandIcon from "../../icons/ZustandIcon.astro";
-import TechContainer from "./TechContainer.astro";
+import GithubIcon from "../../icons/GithubIcon.astro";
 
 interface Props {
   title: string;
   github: string | null;
   figma: string | null;
   projectUrl: string;
-  img: string;
 }
 
-const { title, figma, github, projectUrl, img } = Astro.props;
+const { title, figma, github, projectUrl } = Astro.props;
 ---
 
 <div
-  class="flex flex-col md:flex-row gap-4 border border-b-white/20 border-dashed border-transparent p-4"
+  class="flex flex-col md:flex-row gap-4 border border-b-white/20 border-dashed border-transparent md:p-4"
 >
   <div
     class="relative h-[20rem] w-full md:w-1/2 overflow-hidden parent-container p-[1px]"
   >
     <div
-      class="absolute z-20 text-3xl right-3 bottom-3 cursor-pointer flex flex-row md:flex-col items-center gap-2"
+      class="hidden md:flex absolute z-20 text-3xl right-3 bottom-3 cursor-pointer flex-row md:flex-col items-center gap-2"
     >
-      <slot name="project-urls" />
       <a href={projectUrl} target="_blank"><OpenIcon /></a>
       {
         github ? (
-          <a href={github} target="_blank">
-            <svg
-              class="text-white/50 hover:text-cyan-400 transition-all"
-              width="1em"
-              height="1em"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill="currentColor"
-                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59c.4.07.55-.17.55-.38c0-.19-.01-.82-.01-1.49c-2.01.37-2.53-.49-2.69-.94c-.09-.23-.48-.94-.82-1.13c-.28-.15-.68-.52-.01-.53c.63-.01 1.08.58 1.23.82c.72 1.21 1.87.87 2.33.66c.07-.52.28-.87.51-1.07c-1.78-.2-3.64-.89-3.64-3.95c0-.87.31-1.59.82-2.15c-.08-.2-.36-1.02.08-2.12c0 0 .67-.21 2.2.82c.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82c.44 1.1.16 1.92.08 2.12c.51.56.82 1.27.82 2.15c0 3.07-1.87 3.75-3.65 3.95c.29.25.54.73.54 1.48c0 1.07-.01 1.93-.01 2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-              />
-            </svg>
+          <a
+            href={github}
+            target="_blank"
+            class="text-white/50 hover:text-cyan-400 transition-all"
+          >
+            <GithubIcon />
           </a>
         ) : null
       }
       {
         figma ? (
-          <a href={figma} target="_blank">
+          <a href={figma} target="_self">
             <svg
               class="text-white/50 hover:text-cyan-400 transition-all"
               width="1em"
@@ -68,11 +54,13 @@ const { title, figma, github, projectUrl, img } = Astro.props;
         ) : null
       }
     </div>
-    <div
+    <!-- <div
       class="w-[99.7%] h-[99.5%] absolute border border-transparent bg-black"
     >
       <img src={img} alt="so design!" class="container h-[19.8rem] w-full" />
-    </div>
+      <Image src={img} alt="so design!"/>
+    </div> -->
+    <slot name="image" />
     <div
       class="absolute z-10 h-full w-full bg-gradient-to-t from-black to-transparent bottom-[1px]"
     >
@@ -99,9 +87,51 @@ const { title, figma, github, projectUrl, img } = Astro.props;
   </div>
   <div class="w-full md:w-1/2">
     <div
-      class="bg-gradient-to-r from-white to-black pb-[1px] border border-black"
+      class="bg-gradient-to-r from-white to-black pb-[1px] border border-black flex items-center justify-between w-full"
     >
-      <h2 class="bg-black pb-1 border border-black">Description</h2>
+      <h2 class="bg-black pb-1 border border-black w-full">Description</h2>
+      <div
+        class="md:hidden text-3xl right-3 bottom-3 cursor-pointer flex flex-row md:flex-col items-center gap-2 bg-black"
+      >
+        <a href={projectUrl} target="_blank"><OpenIcon /></a>
+        {
+          github ? (
+            <a href={github} target="_blank">
+              <svg
+                class="text-white/50 hover:text-cyan-400 transition-all"
+                width="1em"
+                height="1em"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill="currentColor"
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59c.4.07.55-.17.55-.38c0-.19-.01-.82-.01-1.49c-2.01.37-2.53-.49-2.69-.94c-.09-.23-.48-.94-.82-1.13c-.28-.15-.68-.52-.01-.53c.63-.01 1.08.58 1.23.82c.72 1.21 1.87.87 2.33.66c.07-.52.28-.87.51-1.07c-1.78-.2-3.64-.89-3.64-3.95c0-.87.31-1.59.82-2.15c-.08-.2-.36-1.02.08-2.12c0 0 .67-.21 2.2.82c.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82c.44 1.1.16 1.92.08 2.12c.51.56.82 1.27.82 2.15c0 3.07-1.87 3.75-3.65 3.95c.29.25.54.73.54 1.48c0 1.07-.01 1.93-.01 2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                />
+              </svg>
+            </a>
+          ) : null
+        }
+        {
+          figma ? (
+            <a href={figma} target="_blank">
+              <svg
+                class="text-white/50 hover:text-cyan-400 transition-all"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g fill="none" stroke="currentColor" stroke-width="1.5">
+                  <>
+                    <path d="M12 2H8.667a3.333 3.333 0 1 0 0 6.667H12zm0 6.667H8.667a3.333 3.333 0 0 0 0 6.666H12z" />
+                    <path d="M18.667 12A3.333 3.333 0 1 1 12 12a3.333 3.333 0 0 1 6.667 0Zm-10 3.334H12v3.333a3.333 3.333 0 1 1-3.333-3.334Z" />
+                    <path d="M12 2h3.333a3.333 3.333 0 1 1 0 6.667H12z" />
+                  </>
+                </g>
+              </svg>
+            </a>
+          ) : null
+        }
+      </div>
     </div>
     <div
       class="border border-dashed border-t-white/20 border-b-white/20 border-transparent p-2 my-2"
