@@ -18,12 +18,50 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
+    <meta name="title" content="Simon Briceño - Portfolio" />
+    <meta
+      name="description"
+      content="These are some of my projects that I have been creating since I started my path as a web developer and I will continue adding projects and solutions to this great repertoire of ideas."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portfolio-web-117.vercel.app/" />
+    <meta property="og:title" content="Simon Briceño - Portfolio" />
+    <meta
+      property="og:description"
+      content="These are some of my projects that I have been creating since I started my path as a web developer and I will continue adding projects and solutions to this great repertoire of ideas."
+    />
+    <meta
+      property="og:image"
+      content="https://i.postimg.cc/0yJgSHbq/opengraph.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://portfolio-web-117.vercel.app/"
+    />
+    <meta property="twitter:title" content="Simon Briceño - Portfolio" />
+    <meta
+      property="twitter:description"
+      content="These are some of my projects that I have been creating since I started my path as a web developer and I will continue adding projects and solutions to this great repertoire of ideas."
+    />
+    <meta
+      property="twitter:image"
+      content="https://i.postimg.cc/0yJgSHbq/opengraph.png"
+    />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
   </head>
   <body class="flex justify-center items-center">
     <Navbar client:load />
     <main
-      class="pt-[0rem] md:pt-[0rem] px-[1rem] md:px-[8rem] h-screen w-full -mr-[2rem] md:mr-0"
+      class="pt-[0rem] px-[1rem] md:px-[8rem] h-screen w-full -mr-[2rem] md:mr-0"
     >
       <slot />
     </main>
